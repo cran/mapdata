@@ -16,7 +16,7 @@ This environment variable (\code{R_MAPDATA_DATA_DIR} for the datasets in the
 mapdata package) is set at package load time.
 }
 \seealso{
-\code{\link{map}}, \code{\link{world}}
+\code{\link[maps]{map}}, \code{\link[maps]{world}}
 }
 \examples{
 map('china')

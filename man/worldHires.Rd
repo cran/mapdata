@@ -27,10 +27,10 @@ mapdata package) is set at package load time.
 }
 \source{
 The CIA World Data Bank II is currently (mid-2003) available from 
-http://www.evl.uic.edu/pape/data/WDB/.
+\url{http://www.evl.uic.edu/pape/data/WDB/}.
 }
 \seealso{
-\code{\link{map}}, \code{\link{world2}}, \code{\link{world}}
+\code{\link[maps]{map}}, \code{\link[maps]{world}}
 }
 \examples{
 map('worldHires', fill=TRUE, col=1:10)
