@@ -3,7 +3,8 @@
 #endif
 #define PI2		(2*PI)
 
-#define SPHERE		0	/* line data is on the sphere */
+#define SPHERE0         0       /* backwards compatibility */
+#define SPHERE		2	/* line data is on the sphere */
 #define PLANE		1	/* line data is on the plane */
 #define EOR		"EOR"	/* end of record indicator */
 #define MIN(a,b)	(a)<(b)?(a):(b)
@@ -39,7 +40,7 @@ typedef int Polyline;		/* all polylines (signed) */
 /* stucture for hash tables */
 typedef struct s_x_h {
 	char *name;
-	long index;
+	int index;
 	struct s_x_h *next;
 } x_h;
 
