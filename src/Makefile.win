@@ -3,11 +3,13 @@ include $(RHOME)/src/gnuwin32/MkRules
 
 .SUFFIXES: .G .L .N .gon .line .n
 
+CFLAGS = -I$(RHOME)/src/include -Wall -pedantic -O2 -DWin32
+
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
 LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
 NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 
-all: Gmake Lmake $(LDATA) $(GDATA) $(NDATA)
+all: Gmake Lmake $(LDATA) $(GDATA) $(NDATA) instdata
 
 ifeq ($(strip $(BUILD)),CROSS)
 Gmake:
@@ -39,6 +41,10 @@ world2Hires.gon: worldHires.gon
 
 world2Hires.n: worldHires.n
 	$(CP) worldHires.n world2Hires.n	# .. since this doesn't
+
+instdata:
+	@$(ECHO) "copying new inst files"
+	$(CP) -r ../inst/* $(RLIB)/$(PKG)
 
 clean:
 	$(RM) Gmake.exe Lmake.exe ../inst/mapdata/* world2Hires.*
