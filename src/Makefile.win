@@ -24,23 +24,23 @@ endif
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-	$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this ..
+	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this ..
 
 .n.N:
-	$(CP) ${*}.n ../inst/mapdata/${*}.N	# .. since this not working?
+	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# .. since this not working?
 
 world2Hires.line: worldHires.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < worldHires.line > world2Hires.line
-	$(CP) worldHires.linestats world2Hires.linestats
-	$(CP) worldHires.n world2Hires.n	# also need this ..
+	@$(CP) worldHires.linestats world2Hires.linestats
+	@$(CP) worldHires.n world2Hires.n	# also need this ..
 
 world2Hires.gon: worldHires.gon
-	$(CP) worldHires.gon world2Hires.gon
-	$(CP) worldHires.gonstats world2Hires.gonstats
+	@$(CP) worldHires.gon world2Hires.gon
+	@$(CP) worldHires.gonstats world2Hires.gonstats
 
 world2Hires.n: worldHires.n
-	$(CP) worldHires.n world2Hires.n	# .. since this doesn't
+	@$(CP) worldHires.n world2Hires.n	# .. since this doesn't
 
 instdata:
 	@$(ECHO) "copying new inst files"

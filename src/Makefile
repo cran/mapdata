@@ -16,17 +16,17 @@ all: Gmake Lmake $(LDATA) $(GDATA)
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
-	$(CP) ${*}.n ../inst/mapdata/${*}.N	# needed here for Mac
+	@$(CP) ${*}.n ../inst/mapdata/${*}.N	# needed here for Mac
 
 world2Hires.line: worldHires.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < worldHires.line > world2Hires.line
-	$(CP) worldHires.linestats world2Hires.linestats
+	@$(CP) worldHires.linestats world2Hires.linestats
 
 world2Hires.gon: worldHires.gon
-	$(CP) worldHires.gon world2Hires.gon
-	$(CP) worldHires.gonstats world2Hires.gonstats
-	$(CP) worldHires.n world2Hires.n
+	@$(CP) worldHires.gon world2Hires.gon
+	@$(CP) worldHires.gonstats world2Hires.gonstats
+	@$(CP) worldHires.n world2Hires.n
 
 clean:
 	$(RM) -f Gmake Lmake ../inst/mapdata/* world2Hires.*
