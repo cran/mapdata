@@ -1,9 +1,12 @@
 #-*- Makefile -*-
+
 .SUFFIXES: .G .L .N .gon .line .name
 
 CP = cp
 ECHO = echo
 RM = rm
+PKGNAME = mapdata
+TOUCH = touch
 
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
 LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
@@ -20,7 +23,7 @@ NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .PHONY: all gdata ldata
 
-all: gdata ndata
+all: gdata ndata $(PKGNAME)$(SHLIB_EXT)
 
 gdata: Gmake ldata
 	$(MAKE) $(GDATA)
@@ -31,6 +34,9 @@ ldata: Lmake world2Hires.line
 ndata:
 	$(MAKE) $(NDATA)
 
+$(PKGNAME)$(SHLIB_EXT):
+	@$(TOUCH) $(PKGNAME)$(SHLIB_EXT)
+
 world2Hires.line: worldHires.line
 	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < worldHires.line > world2Hires.line
@@ -40,4 +46,4 @@ world2Hires.line: worldHires.line
 	@$(CP) worldHires.name world2Hires.name
 
 clean:
-	$(RM) -f Gmake Lmake ../inst/mapdata/* world2Hires.*
+	$(RM) -f Gmake Lmake ../inst/mapdata/* world2Hires.* $(PKGNAME).s[lo] $(PKGNAME).dylib
