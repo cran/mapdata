@@ -33,7 +33,7 @@ The CIA World Data Bank II is currently (mid-2003) available from
 \code{\link[maps]{map}}, \code{\link[maps]{world}}
 }
 \examples{
-map('worldHires', fill=TRUE, col=1:10)
+map('worldHires', col=1:10)
 map('worldHires', 'Switzerland')
 title('Switzerland')
 }

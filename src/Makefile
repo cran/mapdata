@@ -34,4 +34,4 @@ world2Hires.n: worldHires.n
 	$(CP) ${*}.n ../inst/mapdata/${*}.N
 
 clean:
-	$(RM) Gmake Lmake ../inst/mapdata/* world2Hires.*
+	$(RM) -f Gmake Lmake ../inst/mapdata/* world2Hires.*
