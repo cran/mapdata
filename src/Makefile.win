@@ -3,6 +3,7 @@ include $(RHOME)/src/gnuwin32/MkRules
 
 .SUFFIXES: .G .L .N .gon .line .name
 
+PKGNAME = mapdata
 CFLAGS = -I$(RHOME)/src/include -Wall -pedantic -O2 -DWin32
 
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
@@ -10,13 +11,13 @@ LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
 NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .line.L:
-	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
+	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/$(PKGNAME)/${*}.L
 
 .gon.G:
-	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
+	./Gmake b ${*}.gon ${*}.gonstats ../inst/$(PKGNAME)/${*}.G ../inst/$(PKGNAME)/${*}.L
 
 .name.N:
-	@$(CP) ${*}.name ../inst/mapdata/${*}.N
+	@$(CP) ${*}.name ../inst/$(PKGNAME)/${*}.N
 
 ifeq ($(strip $(BUILD)),CROSS)
 Gmake:
@@ -52,4 +53,4 @@ world2Hires.line: worldHires.line
 	@$(CP) worldHires.gonstats world2Hires.gonstats
 
 clean:
-	$(RM) Gmake.exe Lmake.exe ../inst/mapdata/* world2Hires.*
+	$(RM) Gmake.exe Lmake.exe ../inst/$(PKGNAME)/* world2Hires.*
