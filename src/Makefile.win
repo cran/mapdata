@@ -1,0 +1,23 @@
+#-*- Makefile -*-
+include $(RHOME)/src/gnuwin32/MkRules
+
+.SUFFIXES: .G .L .N .gon .line .n
+
+GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
+LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
+NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
+
+all: Gmake Lmake $(LDATA) $(GDATA) $(NDATA)
+
+.line.L:
+	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
+
+.gon.G:
+	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
+	$(CP) ${*}.n ../inst/mapdata/${*}.N	# seem to need this
+
+.n.N:
+	$(CP) ${*}.n ../inst/mapdata/${*}.N
+
+clean:
+	$(RM) *.[GL] Gmake.exe Lmake.exe ../inst/mapdata/*
