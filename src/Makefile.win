@@ -4,7 +4,7 @@ include $(RHOME)/src/gnuwin32/MkRules
 .SUFFIXES: .G .L .N .gon .line .name
 
 PKGNAME = mapdata
-CFLAGS = -I$(RHOME)/src/include -Wall -pedantic -O2 -DWin32
+CFLAGS = -I$(RHOME)/include -Wall -pedantic -O2 -DWin32
 
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
 LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
