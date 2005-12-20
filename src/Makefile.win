@@ -37,7 +37,7 @@ gdata: Gmake ldata
 ldata: Lmake world2Hires.line
 	$(MAKE) $(LDATA)
 
-ndata:
+ndata: world2Hires.line
 	$(MAKE) $(NDATA)
 
 instdata: gdata ndata
