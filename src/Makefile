@@ -21,7 +21,7 @@ NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 .name.N:
 	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
-.PHONY: all gdata ldata
+.PHONY: all gdata ldata ndata
 
 all: gdata ndata $(PKGNAME)$(SHLIB_EXT)
 
@@ -31,7 +31,7 @@ gdata: Gmake ldata
 ldata: Lmake world2Hires.line
 	$(MAKE) $(LDATA)
 
-ndata:
+ndata: world2Hires.line
 	$(MAKE) $(NDATA)
 
 $(PKGNAME)$(SHLIB_EXT):
