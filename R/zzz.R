@@ -1,4 +1,6 @@
 .First.lib <- function(lib, pkg) {
-	Sys.putenv("R_MAPDATA_DATA_DIR"=paste(lib, pkg, "mapdata/", sep="/"))
-	require(maps)
+  if(!exists("Sys.setenv", envir = baseenv()))
+    Sys.setenv <- Sys.putenv
+  Sys.setenv("R_MAPDATA_DATA_DIR"=paste(lib, pkg, "mapdata/", sep="/"))
+  require(maps)
 }
