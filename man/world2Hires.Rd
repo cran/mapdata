@@ -5,7 +5,7 @@
 \title{
 Pacific Centric World Map
 }
-\usage{data(world2)}
+\usage{data(world2HiresMapEnv)}
 \description{
 This world database comes from a cleaned-up version of the CIA
 World Data Bank II data and contains approximately 2 million points
