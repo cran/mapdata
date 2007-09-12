@@ -8,6 +8,8 @@ RM = rm
 PKGNAME = mapdata
 TOUCH = touch
 
+CFLAGS = -g -Wall -pedantic -O6
+
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
 LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
 NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
