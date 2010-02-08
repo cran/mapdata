@@ -1,5 +1,7 @@
 #-*- Makefile -*-
 
+include $(R_HOME)/etc$(R_ARCH)/Makeconf
+
 AWK = gawk
 MAKE = make 
 
