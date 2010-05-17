@@ -7,7 +7,7 @@ New Zealand Map
 }
 \description{
 This database produces a high-resolution map of New Zealand.  The
-database includes many Pacific Island dependencies also.
+database includes Pacific and sub-antartic island dependencies also.
 }
 \format{
 The data file is merely an assignment to a character string which
