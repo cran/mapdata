@@ -2,9 +2,6 @@
 
 include $(R_HOME)/etc$(R_ARCH)/Makeconf
 
-AWK = gawk
-MAKE = make 
-
 .SUFFIXES: .G .L .N .gon .line .name
 
 CFLAGS = -Wall -pedantic -O2 -DWin32
@@ -14,13 +11,15 @@ LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
 NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .line.L:
+	@$(MKDIR) -p ../inst/mapdata
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
 
 .name.N:
-	@cp ${*}.name ../inst/mapdata/${*}.N
+	@$(MKDIR) -p ../inst/mapdata
+	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
 .PHONY: all gdata ldata ndata
 
@@ -36,12 +35,13 @@ ndata: world2Hires.line
 	$(MAKE) -f Makefile.win $(NDATA)
 
 world2Hires.line: worldHires.line
-	@echo "Converting world to world2"
+	@$(ECHO) "Converting world to world2"
 	$(AWK) -f convert.awk < worldHires.line > world2Hires.line
-	@cp worldHires.linestats world2Hires.linestats
-	@cp worldHires.name world2Hires.name
-	@cp worldHires.gon world2Hires.gon
-	@cp worldHires.gonstats world2Hires.gonstats
+	@$(CP) worldHires.linestats world2Hires.linestats
+	@$(CP) worldHires.name world2Hires.name
+	@$(CP) worldHires.gon world2Hires.gon
+	@$(CP) worldHires.gonstats world2Hires.gonstats
 
 clean:
-	rm -f Gmake.exe Lmake.exe ../inst/mapdata/* world2Hires.*
+	$(RM) Gmake.exe Lmake.exe ../inst/mapdata/* world2Hires.*
+	$(RM) -r ../inst
