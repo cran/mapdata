@@ -4,21 +4,24 @@
 
 CP = cp
 ECHO = echo
-RM = rm
+RM = rm -f 
 PKGNAME = mapdata
 TOUCH = touch
+MKDIR = mkdir
 
 GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
 LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
 NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .line.L:
+	@$(MKDIR) -p ../inst/mapdata
 	./Lmake 0 s b ${*}.line ${*}.linestats ../inst/mapdata/${*}.L
 
 .gon.G:
 	./Gmake b ${*}.gon ${*}.gonstats ../inst/mapdata/${*}.G ../inst/mapdata/${*}.L
 
 .name.N:
+	@$(MKDIR) -p ../inst/mapdata
 	@$(CP) ${*}.name ../inst/mapdata/${*}.N
 
 .PHONY: all gdata ldata ndata
@@ -46,4 +49,5 @@ world2Hires.line: worldHires.line
 	@$(CP) worldHires.name world2Hires.name
 
 clean:
-	$(RM) -f Gmake Lmake ../inst/mapdata/* world2Hires.* $(PKGNAME).s[lo] $(PKGNAME).dylib
+	$(RM) Gmake Lmake ../inst/mapdata/* world2Hires.* $(PKGNAME).s[lo] $(PKGNAME).dylib
+	$(RM) -r ../inst
