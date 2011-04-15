@@ -9,9 +9,9 @@ PKGNAME = mapdata
 TOUCH = touch
 MKDIR = mkdir
 
-GDATA = china.G nzHires.G rivers.G worldHires.G world2Hires.G
-LDATA = china.L nzHires.L rivers.L worldHires.L world2Hires.L
-NDATA = china.N nzHires.N rivers.N worldHires.N world2Hires.N
+GDATA = china.G japan.G nzHires.G rivers.G worldHires.G world2Hires.G
+LDATA = china.L japan.L nzHires.L rivers.L worldHires.L world2Hires.L
+NDATA = china.N japan.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .line.L:
 	@$(MKDIR) -p ../inst/mapdata
