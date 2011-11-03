@@ -49,5 +49,5 @@ world2Hires.line: worldHires.line
 	@$(CP) worldHires.name world2Hires.name
 
 clean:
-	$(RM) Gmake Lmake ../inst/mapdata/* world2Hires.* $(PKGNAME).s[lo] $(PKGNAME).dylib
+	$(RM) Gmake Lmake ../inst/mapdata/* world2Hires.* $(PKGNAME).s[lo] $(PKGNAME).dylib *.exe
 	$(RM) -r ../inst
