@@ -6,7 +6,6 @@ CP = cp
 ECHO = echo
 RM = rm -f 
 PKGNAME = mapdata
-TOUCH = touch
 MKDIR = mkdir
 
 GDATA = china.G japan.G nzHires.G rivers.G worldHires.G world2Hires.G
@@ -26,7 +25,7 @@ NDATA = china.N japan.N nzHires.N rivers.N worldHires.N world2Hires.N
 
 .PHONY: all gdata ldata ndata
 
-all: gdata ndata $(PKGNAME)$(SHLIB_EXT)
+all: gdata ndata
 
 gdata: Gmake ldata
 	$(MAKE) $(GDATA)
@@ -36,9 +35,6 @@ ldata: Lmake world2Hires.line
 
 ndata: world2Hires.line
 	$(MAKE) $(NDATA)
-
-$(PKGNAME)$(SHLIB_EXT):
-	@$(TOUCH) $(PKGNAME)$(SHLIB_EXT)
 
 world2Hires.line: worldHires.line
 	@$(ECHO) "Converting world to world2"
