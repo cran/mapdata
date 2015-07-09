@@ -1,4 +1,4 @@
-17020f25c02c38705bfec462e39dc432 *DESCRIPTION
+c87fa386a29d52c50182198b3667c869 *DESCRIPTION
 6261b42b8ec8377db807467060a3712d *NAMESPACE
 f8ef151d048e332371fc71e06493307b *R/zzz.R
 1cfc8d1be8541faac2809ad7f444ef7d *data/chinaMapEnv.rda
@@ -35,7 +35,7 @@ c95f1482f9cfe973de6e6d94159eac37 *src/japan.gonstats
 af30ed085219b34030aee4c99184cf5a *src/nzHires.gonstats
 91257d4865bbde5d981cf7df43e65716 *src/nzHires.line
 abe4ba08ae00bdf8af3cd5c88c2e542e *src/nzHires.linestats
-9814084f25f8efcfb429291ab52e3fb0 *src/nzHires.name
+fae6b86cf505d9102367b45fe41fa52d *src/nzHires.name
 0f7d5e3307fe19a87179d141451b911a *src/rivers.gon
 d560e87e73d9666fa65d316992c5902e *src/rivers.gonstats
 fac485bbef2caad440dd51def7c37329 *src/rivers.line
@@ -45,4 +45,4 @@ d663fc8e20d4109aa313846d203bfd77 *src/rivers.linestats
 0902fc2c7b181fbf40673b9d9748ad00 *src/worldHires.gonstats
 f63eb6174464c2baefc3630e45cb7471 *src/worldHires.line
 a22b40ea95d2ede319743f6bb20a1ab6 *src/worldHires.linestats
-2abd839acc105d625c51d6c3d9287a6b *src/worldHires.name
+68f03e9284badbce449db64b3f2c0370 *src/worldHires.name
