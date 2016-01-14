@@ -1,6 +1,9 @@
-a84c36ddd9afe6e095dd5a41b8a11f51 *DESCRIPTION
+7070e804256b556f4bff9d870fc1c1a4 *DESCRIPTION
 6261b42b8ec8377db807467060a3712d *NAMESPACE
 f8ef151d048e332371fc71e06493307b *R/zzz.R
+bb41a07b00de367aa7d953620868aa2e *cleanup
+759880328f23218f20e80e3897145c9a *configure
+6ae0ac65d0d11b8de6f78ffaf6a5b200 *configure.ac
 1cfc8d1be8541faac2809ad7f444ef7d *data/chinaMapEnv.rda
 95b32710c7ab59d2b37714cdb625f845 *data/japanMapEnv.rda
 3b4514432117dd770f98619765bcd72c *data/nzHiresMapEnv.rda
@@ -15,8 +18,8 @@ c1ec0b77a62d0672d909435b11a777af *data/worldHiresMapEnv.rda
 7f418861cc4c131bcec1c25135890e04 *man/worldHires.Rd
 eccd234607d07a4bb8470fb29acdac41 *src/Gmake.c
 4e6736aa698e81a165bbe6052ae3bf8e *src/Lmake.c
-4feac2d9914f49f08a7c08ecc99c63ed *src/Makefile
-19b3094682cd69bd047fab474ce09741 *src/Makefile.win
+79eeda712fd74bdab97eb5912cc17ea4 *src/Makefile.in
+404958ee0ef0b7a0f63b5299cbfad01a *src/Makefile.win
 acea2ae57cdaf32478bc1b4c23dacb7a *src/README
 981a7c2653b7962753f256cb493a1e75 *src/china.gon
 75bf804e758ca097d635def587aa0f2b *src/china.gonstats
