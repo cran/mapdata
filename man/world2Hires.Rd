@@ -2,10 +2,15 @@
 \docType{data}
 \alias{world2Hires}
 \alias{world2HiresMapEnv}
+\alias{world2Lores}
+\alias{world2LoresMapEnv}
 \title{
 Pacific Centric World Map
 }
-\usage{data(world2HiresMapEnv)}
+\usage{
+data(world2HiresMapEnv)
+data(world2LoresMapEnv)
+}
 \description{
 This world database comes from a cleaned-up version of the CIA
 World Data Bank II data and contains approximately 2 million points
