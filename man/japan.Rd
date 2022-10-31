@@ -27,10 +27,10 @@ map('japan')
 \references{
 Richard A. Becker, and Allan R. Wilks,
 "Maps in S",
-\emph{AT\&T Bell Laboratories Statistics Research Report [93.2], 1993.}
+\emph{AT&T Bell Laboratories Statistics Research Report [93.2], 1993.}
 
 Richard A. Becker, and Allan R. Wilks,
 "Constructing a Geographical Database",
-\emph{AT\&T Bell Laboratories Statistics Research Report [95.2], 1995.}
+\emph{AT&T Bell Laboratories Statistics Research Report [95.2], 1995.}
 }
 \keyword{datasets}

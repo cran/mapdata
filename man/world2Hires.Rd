@@ -26,8 +26,8 @@ This environment variable (\code{R_MAPDATA_DATA_DIR} for the datasets in the
 mapdata package) is set at package load time.
 }
 \source{
-The CIA World Data Bank II is currently (mid-2003) available from 
-\url{http://www.evl.uic.edu/pape/data/WDB/}.
+The CIA World Data Bank II is currently available from 
+\url{https://www.evl.uic.edu/pape/data/WDB/}.
 }
 \seealso{
 \code{\link[maps]{map}}, \code{\link[maps]{world}}, \code{\link{worldHires}},
@@ -39,10 +39,10 @@ map('world2Hires', xlim=c(100, 300))
 \references{
 Richard A. Becker, and Allan R. Wilks,
 "Maps in S",
-\emph{AT\&T Bell Laboratories Statistics Research Report [93.2], 1993.}
+\emph{AT&T Bell Laboratories Statistics Research Report [93.2], 1993.}
 
 Richard A. Becker, and Allan R. Wilks,
 "Constructing a Geographical Database",
-\emph{AT\&T Bell Laboratories Statistics Research Report [95.2], 1995.}
+\emph{AT&T Bell Laboratories Statistics Research Report [95.2], 1995.}
 }
 \keyword{datasets}
